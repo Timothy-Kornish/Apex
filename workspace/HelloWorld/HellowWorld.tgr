@@ -1,0 +1,9 @@
+trigger HelloWorldTrigger on Book(before insert) {
+  Book[] books = Trigger.new;
+
+  MyHelloWorld.applyDiscount(books);
+}
+
+// this trigger is called: HellowWorldTrigger
+// operates on:            Book Object
+// and runs:               Before books inserted into database
